@@ -4,7 +4,7 @@
 1. yml 이 아니라 swift 라서 컴파일 시 오류를 더 잘 잡음
 2. XcodeGen 도 멀티프로젝트 멀티타겟이 가능하지만 트위스트는 좀 더 쉽게 지원함
 3. 클래스 다이어그램을 지원함 (물론 Tuist 안써도 가능함  [swiftAutoDiagram](https://github.com/yoshimkd/swift-auto-diagram) 혹은 [SwiftPlantUML](https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension) )  
-4. SPM 을 100% 쓰고 있었는데 동적 라이브러리 의존성에 문제가 있어서 모듈별 의존성이 분리가 제대로 이루어지지 않았음
+4. SPM 을 100% 쓰고 있었는데 동적 라이브러리 링킹 문제가 있어서 모듈별 의존성이 분리가 제대로 이루어지지 않았음 Mach-O-Type issues
 5. xcodegen generate 할 때마다 spm 캐싱이 되지않아서 방법을 찾아봤는데 못찾겠습니다. 생산성이 너무 떨어짐..
 
 
