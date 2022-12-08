@@ -1,3 +1,3 @@
 # TIL
 
-- [Tuist](https://github.com/2jae6/TIL/tuist.md)
+- [Tuist](https://github.com/2jae6/TIL/blob/tuist.md)
