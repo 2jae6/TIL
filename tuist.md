@@ -24,3 +24,7 @@ https://baechukim.tistory.com/98
 https://silver-g-0114.tistory.com/150
 
 https://nsios.tistory.com/183
+
+https://okanghoon.medium.com/tuist-%EB%A1%9C-%EC%99%B8%EB%B6%80-%EC%9D%98%EC%A1%B4%EC%84%B1-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0-85609e70133c
+
+https://github.com/choidam/tuist_sample
