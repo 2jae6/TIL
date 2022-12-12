@@ -12,7 +12,7 @@
 걱정되는건 서비스 중인 앱에 적용하는 것이라 되던게 안되는 문제는 없도록 꼼꼼하게 잘 확인하고 고쳐야할 것 같습니다.
 
 
-겪었던 문제
+### 겪었던 문제
 1. Firebase 라이브러리 의존성 추가 시 다음과 같은 에러
 ![스크린샷 2022-12-12 오전 9 57 41](https://user-images.githubusercontent.com/47078140/206940174-dec6b3f2-e9fc-4a6d-baa1-f94ecad086bc.png)
 
@@ -23,6 +23,14 @@
 - 터미널에 `tuist fetch`
 
 
+2. Crashlytics
+
+앱을 실행하면 크래시틱스를 실행하려고 Build Phase 에 Script 를 넣어주는 부분이 있는데 기존 SPM 은 Build_DIR (DerivendData 있는 곳)에 넣어두는데
+트위스트는 별도로 트위스트 디렉터리에 외부라이브러리를 캐싱해둔다. 그래서
+`"${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run"`
+를
+`../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Crashlytics/run`
+로 변경해주면된다. (../은 pwd 찍어서 잘해주시면 됩니다.)
 
 레퍼런스
 
