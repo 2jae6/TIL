@@ -11,6 +11,18 @@
 이유는 이정도인 것도 있고 사실 지원하는 기능도 많고 좀 더 잘되어있는 것 같아서 옮기려고 마음을 먹고 있습니다.
 걱정되는건 서비스 중인 앱에 적용하는 것이라 되던게 안되는 문제는 없도록 꼼꼼하게 잘 확인하고 고쳐야할 것 같습니다.
 
+썼던 명령어
+```shell
+tuist edit # 트위스트 프로젝트 코드 짤 때 실행
+tuist clean # 간혹 에러발생하거나 할 때 써쭤야합니다. keyNotFound 같은.
+tuist fetch # Dependency 관련된 수정 사항은 fetch 를 꼭 해줘야합니다.
+tuist generate # workSpace 나 project 만드는 명령어입니다.
+tuist generate --project-only # 프로젝트만 재생성하는 명령어입니다.
+```
+
+전환 이유 4번은 Tuist 기능 중 productType 으로 해결하였습니다.
+
+
 
 ### 겪었던 문제
 1. Firebase 라이브러리 의존성 추가 시 다음과 같은 에러
