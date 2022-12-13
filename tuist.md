@@ -46,6 +46,7 @@ tuist generate --project-only # 프로젝트만 재생성하는 명령어입니�
 
 
 3. Xcode Cloud
+
 Tuist 를 XcodeCloud 에서 돌리려면 ci_script 가 필요하다.
 헌데?
 안타깝게도 XcodeCloud 는 Tuist 설치를 지원하지 않아서 로컬에서 직접 올려줘야한다.
