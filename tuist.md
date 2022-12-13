@@ -44,6 +44,29 @@ tuist generate --project-only # 프로젝트만 재생성하는 명령어입니�
 `../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Crashlytics/run`
 로 변경해주면된다. (../은 pwd 찍어서 잘해주시면 됩니다.)
 
+
+3. Xcode Cloud
+Tuist 를 XcodeCloud 에서 돌리려면 ci_script 가 필요하다.
+헌데?
+안타깝게도 XcodeCloud 는 Tuist 설치를 지원하지 않아서 로컬에서 직접 올려줘야한다.
+https://wojciechkulik.pl/xcode/xcode-cloud-overview-and-setup
+사이트에 조금 내려보면 Tuist 와 관련된 내용이 있다.
+tuist bundle 명령어를 입력하고 추가된 .tuist-bin 파일들을 모두 리모트에 업로드해주면 됩니다.
+그러고 XcodeCloud ci_post_clone.sh 파일에
+
+```swift
+cd ..
+.tuist-bin/tuist fetch
+.tuist-bin/tuist generate
+```
+추가해주면 됩니다.
+
+아그리고 tuist bundle 입력 시  `error io.tuist.support : [TuistSupport] Couldn't find a .tuist-version file in the directory`
+뜨신다면 `tuist local` 입력 후 나타나는 버전을
+`tuist local 3.14.0`
+`tuist bundle` 입력해주시면됩니다.
+
+
 레퍼런스
 
 https://docs.tuist.io/guides/adopting-tuist
