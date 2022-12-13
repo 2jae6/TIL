@@ -66,7 +66,7 @@ cd ..
 뜨신다면 `tuist local` 입력 후 나타나는 버전을
 `tuist local 3.14.0`
 `tuist bundle` 입력해주시면됩니다.
-
+( https://docs.tuist.io/guides/version-management/#bundle 공식문서 첨부할게요 )
 
 레퍼런스
 
