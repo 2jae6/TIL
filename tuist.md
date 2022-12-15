@@ -65,9 +65,7 @@ https://lazyowl.tistory.com/entry/%ED%9A%8C%EA%B3%A0-%EB%A6%AC%EB%93%9C%EC%9D%98
 
   
 
-  ### Crashlytics Dsym upload 설정
-
-
+### Crashlytics Dsym upload 설정
 
 앱을 실행하면 크래시틱스를 실행하려고 Build Phase 에 Script 를 넣어주는 부분이 있는데 기존 SPM 은 Build_DIR (DerivendData 있는 곳)에 넣어두는데 트위스트는 별도로 트위스트 디렉터리에 외부라이브러리를 캐싱해둔다. 
 
