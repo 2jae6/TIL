@@ -1,11 +1,11 @@
 # XcodeGen 에서 Tuist 전환 프로젝트
 
 전환해야겠다고 생각한 이유
-1. yml 이 아니라 swift 라서 프로젝트 제너레이트 할 때 오류를 더 잘 잡는 것 같습니다.
-2. XcodeGen 도 멀티프로젝트 멀티타겟이 가능하지만 트위스트는 좀 더 쉽게 지원합니다.
-3. 클래스 다이어그램을 지원함 (물론 Tuist 안써도 가능함  [swiftAutoDiagram](https://github.com/yoshimkd/swift-auto-diagram) 혹은 [SwiftPlantUML](https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension) )  
-4. SPM 을 100% 쓰고 있었는데 동적 라이브러리 링킹 문제가 있어서 모듈별 의존성이 분리가 제대로 이루어지지 않았습니다. Mach-O-Type issues
-5. xcodegen generate 할 때마다 spm 캐싱이 되지않아서 방법을 찾아봤는데 못찾겠습니다. 생산성이 너무 떨어지더라구요..
+1. yml 이 아니라 swift 라서 문법적인 오류도 잘 잡아내고 프로젝트 제너레이트 할 때 오류를 훨씬 더 잘 잡는 것 같습니다. 또한 Swift 로 되어있어 iOS 개발자들에게 친숙하구요.  yml보단 훨씬 편하네요.
+3. XcodeGen 도 멀티프로젝트 멀티타겟이 가능하지만 트위스트는 좀 더 쉽게 지원합니다.
+4. 클래스 다이어그램을 지원함 (물론 Tuist 안써도 가능함  [swiftAutoDiagram](https://github.com/yoshimkd/swift-auto-diagram) 혹은 [SwiftPlantUML](https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension) )  
+5. SPM 을 100% 쓰고 있었는데 동적 라이브러리 링킹 문제가 있어서 모듈별 의존성이 분리가 제대로 이루어지지 않았습니다. Mach-O-Type issues
+6. xcodegen generate 할 때마다 spm 캐싱이 되지않아서 방법을 찾아봤는데 못찾겠습니다. 생산성이 너무 떨어지더라구요..
 
 
 이유는 이정도인 것도 있고 사실 지원하는 기능도 많고 좀 더 잘되어있는 것 같아서 옮기려고 마음을 먹고 있습니다.
@@ -22,7 +22,21 @@ tuist generate --project-only # 프로젝트만 재생성하는 명령어입니�
 
 전환 이유 4번은 Tuist 기능 중 productType 으로 해결하였습니다.
 
+### Tuist 전환 후 느낀점이나 후기
+전환하고서 좋았던점은 일단 엑코젠은 원프로젝트 멀티 타겟으로 했었는데 (리액티브빼고)
+멀티프로젝트로 모듈들이 바뀌면서 좀 더 관리하기가 쉬워졌다고 느껴졌어요. 원하는 것들끼리 데모앱도 만들 수 있고 의존성 그래프도 볼 수 있으니까요. 그리고 generate 시 Dependency 들이 캐싱되어있는게 너어어어어무 만족스러워요.
 
+만약 본인 팀이 spm을 쓰는데 XcodeGen을 쓰려고한다?... 저는 말리고싶다는 의견입니다.
+
+음 또 좋은점은 저희 프로젝트는 뭐가 문제였는지 모르겠지만 새로운 파일이 추가되면 의존성 트리가 뭉게지면서 다른 타겟 header을 찾을 수 없다나 뭐라나 .. 그래서 추가하고 다시 generate 하는 그런 문제들이 있었는데 말끔히 살아져서 너무 좋고요...
+
+트위스트나 엑코젠이나 기능들이 드라마틱하게 다르지는 않아서 체감하기가 어렵긴 하지만 확실히 관리하기도 편하고 구조도 더 깔끔하다고 생각이 들었습니다.
+
+무엇보다 배포하고나서 계획했던 
+
+https://lazyowl.tistory.com/entry/%ED%9A%8C%EA%B3%A0-%EB%A6%AC%EB%93%9C%EC%9D%98-%EC%B2%AB%EC%8B%9C%EC%9E%91%EB%B6%80%ED%84%B0-%EC%B2%AB-%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80%EC%9D%98-%EC%97%AC%EC%A0%95
+
+마일스톤들을 많이 지킨 것 같아서 뿌듯하구요.
 
 ### 겪었던 문제
 1. Firebase 라이브러리 의존성 추가 시 다음과 같은 에러
