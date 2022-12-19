@@ -81,6 +81,34 @@ init 을 추가해주면됩니다.
 
 
 
+```swift
+@propertyWrapper
+struct PlusThree {
+  var value = 0
+
+  var wrappedValue: Int {
+    get { value }
+    set { value = newValue + 3 }
+  }
+
+  init(wrappedValue initialValue: Int) {
+      self.wrappedValue = initialValue
+  }
+
+  func talk() {
+    print("말하기")
+  }
+}
+
+struct TestStruct {
+  @PlusThree var number: Int
+
+  func testFunction() {
+    _number.talk()
+  }
+}
+```
+
 
 
 
