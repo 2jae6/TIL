@@ -9,5 +9,5 @@
 
 # 후기
 - [2022 if Kakao 후기](https://github.com/2jae6/TIL/blob/master/2022%20if%20KaKao)
-- [2022 Lets Swift 후기]
+- [2022 Lets Swift 후기](https://github.com/2jae6/TIL/blob/master/2022%20Lets%20Swift.md)
 
