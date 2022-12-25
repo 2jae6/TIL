@@ -20,13 +20,15 @@
 동적 프레임워크를 Embeded 하지 않으면 크래시
 정적 프레임워크 사용 시 코드 중복 복사 문제
 
+
 트위스트는 하위 모듈도 알아서 Embeded 해줍니다.
 
 모듈 구성도
 
-/var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_ZetfJd/Screen Shot 2022-12-25 at 1.02.43 PM.png
+<img width="400" alt="Screen Shot 2022-12-25 at 1 09 39 PM" src="https://user-images.githubusercontent.com/47078140/209456709-53e8ac15-b493-4c37-a364-62b5bc5d7104.png">
+<img width="400" alt="Screen Shot 2022-12-25 at 1 10 14 PM" src="https://user-images.githubusercontent.com/47078140/209456727-577f02b8-14d7-4646-9f14-7bc575012c0b.png">
+<img width="400" alt="Screen Shot 2022-12-25 at 1 11 05 PM" src="https://user-images.githubusercontent.com/47078140/209456739-6a6dbdd7-0009-4bfa-a7e3-522c63b5e48c.png">
 
-/var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_zimIGX/Screen Shot 2022-12-25 at 1.02.57 PM.png
 
 모듈아키텍처 설계로 얻은 이점
 - 전체적인 의존관계 파악가능
