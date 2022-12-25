@@ -23,6 +23,7 @@
 트위스트는 하위 모듈도 알아서 Embeded 해줍니다.
 
 모듈 구성도
+
 /var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_ZetfJd/Screen Shot 2022-12-25 at 1.02.43 PM.png
 /var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_zimIGX/Screen Shot 2022-12-25 at 1.02.57 PM.png
 
@@ -32,6 +33,7 @@
 - 코드에서 모듈로 관점 변경
 
 후기
+
 현재 iOS 개발시장에서 Tuist를 이용한 모듈화 아키텍처가 왜 유행하고 필요로하는지를 잘 설명해주신 것 같습니다. 쉽게 설명해주셔서 너무 좋았고 저희 회사에서도 Tuist 를 도입하여 느꼈던 이점 외에도 많은 이점들을 알게되었고(데모빌드와 같은) 모듈 문서화 등이나 어떤 기준으로 모듈의 레이어를 구분하는지도 참고 할 수 있어서 좋았습니다.
 
 
