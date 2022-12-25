@@ -1,4 +1,4 @@
-### 카카오뱅크 iOS 프로젝트의 모듈화 여정: Tuist를 활용한 모듈 아키텍처 설계 사례 - 안정민(민소네)님
+## 카카오뱅크 iOS 프로젝트의 모듈화 여정: Tuist를 활용한 모듈 아키텍처 설계 사례 - 안정민(민소네)님
 
 11000개 파일 104만줄 프로젝트가 되면서 사람이 많아지고 코드 수가 많아지면서 문제가 발생하였다.
 
@@ -23,20 +23,22 @@
 
 트위스트는 하위 모듈도 알아서 Embeded 해줍니다.
 
-모듈 구성도
+### 모듈 구성도
 
 <img width="400" alt="Screen Shot 2022-12-25 at 1 09 39 PM" src="https://user-images.githubusercontent.com/47078140/209456709-53e8ac15-b493-4c37-a364-62b5bc5d7104.png">
 <img width="400" alt="Screen Shot 2022-12-25 at 1 10 14 PM" src="https://user-images.githubusercontent.com/47078140/209456727-577f02b8-14d7-4646-9f14-7bc575012c0b.png">
 <img width="400" alt="Screen Shot 2022-12-25 at 1 11 05 PM" src="https://user-images.githubusercontent.com/47078140/209456739-6a6dbdd7-0009-4bfa-a7e3-522c63b5e48c.png">
 
 
-모듈아키텍처 설계로 얻은 이점
+### 모듈아키텍처 설계로 얻은 이점
 - 전체적인 의존관계 파악가능
 - 증분빌드 활용
 - 코드에서 모듈로 관점 변경
 
-후기
+### 후기
 
 현재 iOS 개발시장에서 Tuist를 이용한 모듈화 아키텍처가 왜 유행하고 필요로하는지를 잘 설명해주신 것 같습니다. 쉽게 설명해주셔서 너무 좋았고 저희 회사에서도 Tuist 를 도입하여 느꼈던 이점 외에도 많은 이점들을 알게되었고(데모빌드와 같은) 모듈 문서화 등이나 어떤 기준으로 모듈의 레이어를 구분하는지도 참고 할 수 있어서 좋았습니다.
 
+### 레퍼런스
+https://www.youtube.com/watch?v=Up0wYoyY3o0
 
