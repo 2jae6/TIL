@@ -23,7 +23,8 @@
 트위스트는 하위 모듈도 알아서 Embeded 해줍니다.
 
 모듈 구성도
-
+/var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_ZetfJd/Screen Shot 2022-12-25 at 1.02.43 PM.png
+/var/folders/05/kms4rmpx6xq0nsf3n0374ygr0000gn/T/TemporaryItems/NSIRD_screencaptureui_zimIGX/Screen Shot 2022-12-25 at 1.02.57 PM.png
 
 모듈아키텍처 설계로 얻은 이점
 - 전체적인 의존관계 파악가능
