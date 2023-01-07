@@ -6,7 +6,18 @@
 - 앱스토어에서 InjectionIII 다운로드 
 <img width="250" alt="Screenshot 2023-01-07 at 11 11 03 PM" src="https://user-images.githubusercontent.com/47078140/211154963-0a9b3c02-b031-464e-a386-c60cd9e74391.png">
 - 라이브러리 https://github.com/johnno1962/InjectionIII 를 프로젝트에 추가
+- Build Settings 에 Other Linker Flags 설정에 "-Xlinker -interposable" 추가
 
+셋팅은 끝났고
+
+이제 Inject.ViewControllerHost 를 이용해서 ViewController 를 띄우면 됩니다.
+
+```swift
+let viewController = Inject.ViewControllerHost(YourViewController())  ✅
+rootViewController.pushViewController(viewController, animated: true)
+```
+
+스유에서도 가능한데..  왜.. 쓰는지는 모르겠다..
 
 
 
