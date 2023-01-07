@@ -13,7 +13,7 @@
 이제 Inject.ViewControllerHost 를 이용해서 ViewController 를 띄우면 됩니다.
 
 ```swift
-let viewController = Inject.ViewControllerHost(YourViewController())  ✅
+let viewController = Inject.ViewControllerHost(ViewController())
 rootViewController.pushViewController(viewController, animated: true)
 ```
 
