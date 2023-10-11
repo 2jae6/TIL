@@ -11,7 +11,8 @@ firebase 의 xcframework 자체를 프로젝트 내부에 넣고 tuist 에서는
 앱 내에서 우리가 필요로하는 firebase 내부 모듈은 총 5가지 (FirebaseAnalytics, FirebaseCrashlytics, FirebaseAuth, FirebaseDynamicLinks, FirebaseMessaging) 이며
 이 모듈들이 포함하는 xcframework 들을 tuist dependencies 내에 추가해준다.
 
-"""swift
+'''swift
+
       dependencies: [
         // FirebaseAnalytics
         .xcframework(path: .relativeToRoot("Frameworks/Firebase/FirebaseAnalytics/FBLPromises.xcframework")),
@@ -40,5 +41,6 @@ firebase 의 xcframework 자체를 프로젝트 내부에 넣고 tuist 에서는
         // FirebaseMessaging
         .xcframework(path: .relativeToRoot("Frameworks/Firebase/FirebaseMessaging/FirebaseMessaging.xcframework"))
       ]
-"""
+
+'''
 
