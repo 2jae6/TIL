@@ -23,9 +23,8 @@ jobs:
           retry-delay: 10s # Optional, only applicable to max-attempts > 1
           # Retry all errors, including 404. This option might trigger curl upgrade.
           retry-all: false # Optional, defaults to "false"
- 
-    steps:
-      - uses: 8398a7/action-slack@v3
+      - name: slack
+        uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
           author_name: Github Action Health Check
