@@ -29,7 +29,7 @@ jobs:
           status: ${{ job.status }}
           author_name: Github Action Health Check
           fields: repo,message,commit,action,eventName,ref,workflow,job,took # 보낼 정보들
-          github_token: ${{ secrets.ACCESS_TOKEN_GIT }}
+          # github_token: ${{ secrets.ACCESS_TOKEN_GIT }}
         env:
          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
         if: always() # 스크립트 성공/실패 여부에 상관없이 항상 수행되도록 설정
