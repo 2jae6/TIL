@@ -28,7 +28,7 @@ jobs:
         with:
           status: ${{ job.status }}
           author_name: Github Action Health Check
-          fields: repo,message,commit,action,eventName,ref,workflow,job,took # 보낼 정보들
+          fields: workflow # 보낼 정보들
           # github_token: ${{ secrets.ACCESS_TOKEN_GIT }}
         env:
          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
