@@ -32,4 +32,4 @@ jobs:
           
         env:
          SLACK_WEBHOOK_URL: ${{ secrets.webhook }}
-        if: always() # 스크립트 성공/실패 여부에 상관없이 항상 수행되도록 설정
+        if: failure() # 스크립트 성공/실패 여부에 상관없이 항상 수행되도록 설정
