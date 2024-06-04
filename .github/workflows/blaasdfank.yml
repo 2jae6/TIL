@@ -28,8 +28,12 @@ jobs:
         with:
           status: ${{ job.status }}
           author_name: Github Action Health Check
+           custom_payload: |
+          {
+           payload= {"text": "채널에 있는 한 줄의 텍스트입니다.\n또 다른 한 줄의 텍스트입니다."}
+          }
           fields: workflow # 보낼 정보들
-          # github_token: ${{ secrets.ACCESS_TOKEN_GIT }}
+          github_token: ${{ secrets.ACCESS_TOKEN_GIT }}
         env:
          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
         if: always() # 스크립트 성공/실패 여부에 상관없이 항상 수행되도록 설정
