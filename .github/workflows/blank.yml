@@ -1,0 +1,24 @@
+steps:
+  - name: Check the deployed service URL
+    uses: jtalk/url-health-check-action@v4
+    with:
+      # Check the following URLs one by one sequentially
+      url: https://dev5505.phocamarket.com/card/v1/28074
+      # Follow redirects, or just report success on 3xx status codes
+      follow-redirect: false # Optional, defaults to "false"
+      # Fail this action after this many failed attempts
+      max-attempts: 1 # Optional, defaults to 1
+      # Delay between retries
+      retry-delay: 10s # Optional, only applicable to max-attempts > 1
+      # Retry all errors, including 404. This option might trigger curl upgrade.
+      retry-all: false # Optional, defaults to "false"
+      
+- name: action-slack
+	uses: 8398a7/action-slack@v3
+    with:
+      status: ${{ job.status }}
+      author_name: Github Action Health Check
+      fields: repo,message,commit,action,eventName,ref,workflow,job,took # 보낼 정보들
+    env:
+      SLACK_WEBHOOK_URL: ${{ https://hooks.slack.com/services/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 }} # required
+    if: always() # 스크립트 성공/실패 여부에 상관없이 항상 수행되도록 설정
